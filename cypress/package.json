@@ -1,10 +1,18 @@
 {
   "name": "cypress",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.3.0"
+  },
+  "dependencies": {
     "ansi-escapes": "^4.3.2",
     "ansi-regex": "^5.0.1",
     "ansi-styles": "^4.3.0",
@@ -166,14 +174,5 @@
     "wrap-ansi": "^7.0.0",
     "wrappy": "^1.0.2",
     "yauzl": "^2.10.0"
-  },
-  "devDependencies": {
-    "cypress": "^14.3.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
