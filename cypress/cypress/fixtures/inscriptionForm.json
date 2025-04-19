@@ -1,0 +1,9 @@
+{
+  "email": "avistest@test.fr",
+  "firstname": "test",
+  "lastname": "test",
+  "plainPassword": {
+    "first": "fakePassword",
+    "second": "fakePassword"
+  }
+}

@@ -26,13 +26,14 @@ describe('Gestion du panier', () => {
     cy.get('input[type=number][formcontrolname="quantity"]').clear().type('21');
     cy.get('[data-cy="detail-product-add"]').click();
 
-    cy.get('input[type=number][formcontrolname="quantity"]').clear().type('1');
-    cy.get('[data-cy="detail-product-add"]').click();
+    cy.get('input[type=number][formcontrolname="quantity"]').clear().type('-1');
+    cy.getBySel('detail-product-add').click();
     cy.contains(/en stock/i).should('be.visible');
     
   });
 
   it('Le stock se met à jour après ajout au panier', () => {
-    
+    cy.contains('Consulter').click();
+    cy.contains(/en stock/i).should('be.visible');
   });
 });

@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 describe('API test', ()=>{
 
-  it('should return 401 or 403 when accessing order without auth', ()=>{
+  it('should return 401 when accessing order without auth', ()=>{
     cy.request({
       method:'GET',
       url:'http://localhost:8081/orders',
       failOnStatusCode:false
-    }).its('status').should('be.oneOf',[401,403]);
+    }).its('status').should('eq',401);
   });
 
   context('Avec authentification', () => {
@@ -43,7 +43,7 @@ describe('API test', ()=>{
       });
     });
 
- 
 
+    
   });
 });
