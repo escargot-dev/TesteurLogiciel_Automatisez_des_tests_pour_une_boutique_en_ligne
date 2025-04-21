@@ -26,6 +26,9 @@ describe('inscription Form Cypress', ()=> {
 
     cy.get('[data-cy="register-submit"]').click();
 
+    cy.get('[data-cy="register-errors"]').should('be.visible')
+      .should('contain', 'Cette adresse mail est déjà  utilisée');
+
   });
 
 });
