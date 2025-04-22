@@ -50,10 +50,13 @@ Ce projet consiste à :
 
 ## Confiance et couverture
 
-Néanmoins, il est clair que la campagne de test n'a pas été exhaustive et qu'il subsiste des lacunes dans la couverture des tests. En particulier, il y a des domaines critiques qui n'ont pas été suffisamment testés, notamment l'API du système et les fonctionnalités essentielles comme le panier.
-
-Cette insuffisance de tests dans ces zones clés pourrait avoir des conséquences négatives sur l'expérience utilisateur et la stabilité du système une fois déployé en production. Il est donc crucial d'augmenter la couverture de test dans ces domaines critiques. Cela permettra de minimiser les risques d'échec imprévus et d'assurer un niveau de qualité élevé pour l'ensemble du système.
-
-Pour ce faire, il est recommandé de mettre en place une stratégie de test plus robuste, en identifiant les fonctionnalités essentielles et les scénarios d'utilisation prioritaires, et en allouant suffisamment de ressources et de temps pour les tests dans ces domaines.
-
-En conclusion, bien que la campagne de test ait fourni des informations précieuses, il est impératif de reconnaître les lacunes actuelles et de prendre des mesures concrètes pour renforcer la couverture de test, en particulier sur les aspects cruciaux tels que l'API et les fonctionnalités critiques comme le panier. Cela garantira la fiabilité et la qualité du système lors de son déploiement en production.
+Bien que la campagne de test ait permis de detecter des bugs critiques et dautomatiser deux
+scenarios cles (connexion et panier), elle nest pas encore exhaustive. Des zones sensibles comme
+lAPI ou le systeme de stock meriteraient une couverture plus large.
+Il est fortement recommande de renforcer la strategie de test, en identifiant les priorites
+fonctionnelles et en allouant plus de temps aux tests automatises. Cela garantira une **meilleure
+fiabilite du systeme en production**.
+---
+** Conclusion :**
+Cette premiere phase dautomatisation est prometteuse, mais necessite un elargissement pour
+securiser davantage lapplication cote API et gestion de stock.
