@@ -15,9 +15,9 @@ describe('Ajouter un avis', () => {
       
       failOnStatusCode:false
     }).its('status').should('eq', 404);
-
+    cy.screenshot()
     cy.contains('Connectez-vous pour ajouter un avis.').should('be.visible');
-
+    
     cy.get('[data-cy="nav-link-register"]').click();
 
   });
