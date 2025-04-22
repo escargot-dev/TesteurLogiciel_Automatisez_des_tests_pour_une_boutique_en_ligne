@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe('Ajouter un avis', () => {
-  before(()=> {
+  beforeEach(()=> {
     cy.apiLogin();  
   });
 
@@ -22,5 +22,24 @@ describe('Ajouter un avis', () => {
 
   });
 
+  it('POST a review and test the XSS', () => {
+    cy.get('@authToken').then((token) => {
+      cy.request({
+        method: "POST", 
+        url: "http://localhost:8081/reviews",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: {
+          title: "test", 
+          comment: "<script>alert('test')</script>", 
+          rating: 5
+        }
+      }).then((response) => {
+        expect(response.status).to.eq(200);
+        
+      });
+    });
+  });
 
 });

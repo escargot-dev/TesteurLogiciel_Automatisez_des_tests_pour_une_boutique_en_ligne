@@ -3,6 +3,8 @@
 describe('test api', function() {
   this.beforeEach(function() {
     cy.apiLogin();  
+
+    cy.visit('/orders');
   });
 
   it('PUT specific available product in the cart',function(){
