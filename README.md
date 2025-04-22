@@ -54,7 +54,7 @@ Bien que la campagne de test ait permis de detecter des bugs critiques et dautom
 scenarios cles (connexion et panier), elle nest pas encore exhaustive. Des zones sensibles comme
 lAPI ou le systeme de stock meriteraient une couverture plus large.
 Il est fortement recommande de renforcer la strategie de test, en identifiant les priorites
-fonctionnelles et en allouant plus de temps aux tests automatises. Cela garantira une **meilleure
+fonctionnelles et en allouant plus de temps aux tests automatises. Cela garantira une meilleure
 fiabilite du systeme en production.
 
 
