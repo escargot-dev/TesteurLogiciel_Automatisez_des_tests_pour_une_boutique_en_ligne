@@ -1,80 +1,54 @@
-README – Projet 10 : Automatisation des tests pour une boutique en ligne
+README – #  Projet 10 — Tests automatisés avec Cypress
 
-Description du projet
+##  Réalisé par  
+**Kumkang LE ROUIC — QA Engineer**
+
+##  Description du projet
 
 Ce projet vise à automatiser une série de tests fonctionnels et techniques pour une boutique en ligne, en utilisant le framework Cypress avec JavaScript. L'objectif principal est d'assurer la stabilité de l'application à travers différents scénarios critiques et récurrents, en complément des tests manuels existants.
 
-Dépôt GitHub
+##  Contexte
+Ce projet consiste à :
+- Évaluer un plan de tests manuels existant.
+- Identifier deux scénarios critiques à automatiser.
+- Écrire et exécuter des tests automatisés avec Cypress.
+- Tester les API, le fonctionnement général (smoke tests) et des cas fonctionnels précis.
+- Documenter le tout dans un dépôt GitHub.
 
-https://github.com/escargot-dev/TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne.git
+##  Technologies utilisées
+- JavaScript
+- Cypress
+- Node.js / npm
+- Git & GitHub
 
-Structure du projet Cypress
+##  Lancer la campagne de test Cypress
+    # Installation des dependances  : npm install
+    # Lancer l'interface graphique Cypress : npx cypress open
+    # Ou executer tous les tests en headless : npx cypress run
 
-Dossier e2e/ :
+---
+## Lien GitHub du projet : 
+    https://github.com/escargot-dev/TesteurLogiciel_Automatisez_des_tests_pour_une_boutique_en_ligne.git
 
-api-post.cy.js
+## Scénarios automatisés sélectionnés (Parmi les scénarios possibles identifiés, deux ont été automatisés) :
 
-api.cy.js
+    Connexion utilisateur (connextion.cy.js)
 
-avis-api.cy.js
+    Ajout au panier (panier.cy.js)
 
-connextion.cy.js
+## Raisons du choix
 
-inscriptionForm.cy.js
+  Le budget de temps et de ressources ne permettait pas d’automatiser l'ensemble des cinq scénarios critiques identifiés. Les fonctionnalités évaluées étaient :
 
-panier.cy.js
+    Connexion  / Affichage des produits  / Panier  / Inscription  / Navigation générale
 
-smoke.cy.js
+  Deux scénarios ont été priorisés car ils sont à la fois :
 
-Dossier fixtures/ :
+    Les plus critiques pour l'expérience utilisateur.
+    Les plus susceptibles de générer des erreurs s'ils sont altérés.
+    Ils couvrent les étapes clés du parcours client : l'accès à l'espace utilisateur et la finalisation de la commande.
 
-inscriptionForm.json
-
-Dossier support/ :
-
-commands.js
-
-Dossier screenshots/ :
-
-avis-api.cy.js
-
-inscriptionForm.cy.js
-
-Fichier de configuration :
-
-cypress.config.js
-
-Scénarios automatisés sélectionnés
-
-Parmi les scénarios possibles identifiés, deux ont été automatisés :
-
-Connexion utilisateur (connextion.cy.js)
-
-Ajout au panier (panier.cy.js)
-
-Raisons du choix
-
-Le budget de temps et de ressources ne permettait pas d’automatiser l'ensemble des cinq scénarios critiques identifiés. Les fonctionnalités évaluées étaient :
-
-Connexion
-
-Affichage des produits
-
-Panier
-
-Inscription
-
-Navigation générale
-
-Deux scénarios ont été priorisés car ils sont à la fois :
-
-Les plus critiques pour l'expérience utilisateur.
-
-Les plus susceptibles de générer des erreurs s'ils sont altérés.
-
-Ils couvrent les étapes clés du parcours client : l'accès à l'espace utilisateur et la finalisation de la commande.
-
-Confiance et couverture
+## Confiance et couverture
 
 Néanmoins, il est clair que la campagne de test n'a pas été exhaustive et qu'il subsiste des lacunes dans la couverture des tests. En particulier, il y a des domaines critiques qui n'ont pas été suffisamment testés, notamment l'API du système et les fonctionnalités essentielles comme le panier.
 
