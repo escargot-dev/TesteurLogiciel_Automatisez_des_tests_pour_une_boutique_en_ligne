@@ -55,8 +55,10 @@ scenarios cles (connexion et panier), elle nest pas encore exhaustive. Des zones
 lAPI ou le systeme de stock meriteraient une couverture plus large.
 Il est fortement recommande de renforcer la strategie de test, en identifiant les priorites
 fonctionnelles et en allouant plus de temps aux tests automatises. Cela garantira une **meilleure
-fiabilite du systeme en production**.
----
-** Conclusion :**
+fiabilite du systeme en production.
+
+
+## Conclusion :
 Cette premiere phase dautomatisation est prometteuse, mais necessite un elargissement pour
 securiser davantage lapplication cote API et gestion de stock.
+
