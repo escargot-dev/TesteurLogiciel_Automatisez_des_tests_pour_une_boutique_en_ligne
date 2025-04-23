@@ -17,7 +17,7 @@ describe('inscription Form Cypress', ()=> {
     cy.get('[data-cy="register-submit"]').should('contain.text',"S'inscrire");
   }); 
 
-  it('emplir et soumettre le formulaire avec des données',function(){
+  it('remplir et soumettre le formulaire avec des données',function(){
     cy.get('[data-cy="register-input-lastname"]').type(this.formulaire.lastname);
     cy.get('[data-cy="register-input-firstname"]').type(this.formulaire.firstname);
     cy.get('[data-cy="register-input-email"]').type(this.formulaire.email);
