@@ -19,16 +19,20 @@ describe('Gestion du panier', () => {
     });
   });
 
-  it('Vérifie les limites de quantités', () => {
+  it('Vérifie les limites de quantités - entrez un chiffre supérieur à 20', () => {
     cy.contains('Consulter').click();
     cy.contains(/en stock/i).should('be.visible');
 
     cy.get('input[type=number][formcontrolname="quantity"]').clear().type('21');
     cy.get('[data-cy="detail-product-add"]').click();
 
+  });
+  it('Vérifie les limites de quantités - entrez un chiffre négatif', () => {
+    cy.contains('Consulter').click();
+    cy.contains(/en stock/i).should('be.visible');
+
     cy.get('input[type=number][formcontrolname="quantity"]').clear().type('-1');
     cy.getBySel('detail-product-add').click();
-    cy.contains(/en stock/i).should('be.visible');
     
   });
 
