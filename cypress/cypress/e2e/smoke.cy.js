@@ -19,6 +19,8 @@ describe('Smoke Tests', () =>{
   it('Champ de disponibilité produit visible', () => {
     cy.visit('http://localhost:8080/#/products/${id}')
     cy.getBySel('detail-product-stock').should('exist');
+    cy.get('[data-cy="detail-product-price"]').should('be.visible');
+    cy.get('[data-cy="detail-product-quantity"]').should('be.visible');
   });
 
 })

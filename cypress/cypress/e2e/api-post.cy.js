@@ -7,10 +7,10 @@ describe('test api', function() {
     cy.visit('/orders');
   });
 
-  it('PUT specific available product in the cart',function(){
+  it('POST specific available product in the cart',function(){
     cy.get('@authToken').then((token) => {
       cy.request({
-        method: "PUT", 
+        method: "POST", 
         url: 'http://localhost:8081/orders/add',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -32,10 +32,10 @@ describe('test api', function() {
     });
   });
 
-  it('PUT specific out of stock product in the cart', function(){
+  it('POST specific out of stock product in the cart', function(){
     cy.get('@authToken').then((token) => {
       cy.request({
-        method: "PUT",
+        method: "POST",
         url: 'http://localhost:8081/orders/add',
         headers: {
           Authorization: `Bearer ${token}`,

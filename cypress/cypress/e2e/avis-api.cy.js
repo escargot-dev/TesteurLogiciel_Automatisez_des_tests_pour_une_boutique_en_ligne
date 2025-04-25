@@ -11,14 +11,15 @@ describe('Ajouter un avis', () => {
 
     cy.request({
       method: 'GET',
-      url: `http://localhost:8081/riviews`,
+      url: `http://localhost:8081/reviews`,
       
       failOnStatusCode:false
-    }).its('status').should('eq', 404);
-    cy.screenshot()
+    }).its('status').should('eq', 200);
+
+    cy.get('[data-cy="review-form"]').should('exist');
+    
     cy.contains('Connectez-vous pour ajouter un avis.').should('be.visible');
     
-    cy.get('[data-cy="nav-link-register"]').click();
 
   });
 

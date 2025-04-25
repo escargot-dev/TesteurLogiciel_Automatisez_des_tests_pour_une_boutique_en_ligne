@@ -24,7 +24,7 @@ describe('Gestion du panier', () => {
     cy.contains(/en stock/i).should('be.visible');
 
     cy.get('input[type=number][formcontrolname="quantity"]').clear().type('21');
-    cy.get('[data-cy="detail-product-add"]').click();
+    cy.get('[data-cy="detail-product-add"]').should('be.visible').should('not.be.disabled');
 
   });
   it('Vérifie les limites de quantités - entrez un chiffre négatif', () => {
@@ -32,7 +32,7 @@ describe('Gestion du panier', () => {
     cy.contains(/en stock/i).should('be.visible');
 
     cy.get('input[type=number][formcontrolname="quantity"]').clear().type('-1');
-    cy.getBySel('detail-product-add').click();
+    cy.getBySel('detail-product-add').should('be.visible').should('be.disabled');
     
   });
 
